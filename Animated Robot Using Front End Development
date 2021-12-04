@@ -1,0 +1,146 @@
+//------------------------------HTML FILE----------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot</title>
+    <link rel="stylesheet" href="Robot.css">
+</head>
+<body>
+    <h1 class="heading">Robot</h1>
+    <div id="robot">
+    <!-- head,torso,arms -(upper,fore) ,legs-(thigh,lower) -->
+    <div id="head" class="look"></div>
+    <div id="torso">
+        <div class="look"></div>
+    </div>
+    <div id="leftarm">
+        <div class="upperarm look"></div>
+        <div class="forearm look"></div>
+    </div>
+    <div id="rightarm">
+        <div class="upperarm look"></div>
+        <div class="forearm look"></div>
+    </div>
+    <div id="leftleg">
+        <div class="thigh look"></div>
+        <div class="lowerleg look"></div>
+        <div class="shoeleft"></div>
+    </div>
+    <div id="rightleg">
+        <div class="thigh look"></div>
+        <div class="lowerleg look"></div>
+        <div class="shoeright"></div>
+    </div>
+</div>
+</body>
+</html>
+
+//-------------------------------ROBOT.CSS FILE---------------------------------------------
+html,
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    background: #667db6;
+    background: linear-gradient(to right,#667db6 ,#0002cb );
+}
+#robot{
+    width: 300px;
+    height: 620px;
+    margin: 50px auto 0;
+    position: relative;
+}
+.look{
+    background-color: #ffaabb;
+    width: inherit;
+    height: inherit;
+}
+#head{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 110px;
+}
+#torso{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 220px solid #ffaabb;
+}
+#leftarm{
+    width: 25px;
+    height: 240px;
+    left: 30px;
+    position: absolute;
+    top: 110px;
+    left: 30px;
+}
+
+#rightarm{
+    width: 25px;
+    height: 240px;
+    position: absolute;
+    top: 110px;
+    right: 30px;
+}
+.upperarm{
+    width: 25px;
+    height: 125px;
+}
+.forearm{
+    width: 25px;
+    height: 100px;
+    margin-top: 10px;
+}
+#leftleg{
+    width: 30px;
+    height: 340px;
+    position: absolute;
+    top: 280px;
+    left: 85px;
+}
+#rightleg{
+    width: 30px;
+    height: 340px;
+    position: absolute;
+    top: 280px;
+    right: 85px;
+}
+.thigh{
+    width: 30px;
+    height: 150px;
+}
+.lowerleg{
+    width: 30px;
+    height: 170px;
+    margin-top: 10px;
+
+}
+.shoeleft, .shoeright{
+    width: 30px;
+    height: 10px;
+    position: relative;
+    background-color: blueviolet;
+}
+#leftarm .forearm:hover{
+    transform: rotate(-10deg);
+}
+#rightarm .forearm:hover{
+    transform: rotate(10deg);
+}
+#head:hover{
+    transform: scale(1.2);
+}
+#torso:hover{
+    transform: scale(1.2);
+}
+
+
+
